@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
+import { VitePWA } from 'vite-plugin-pwa'
 
 const nonHashFiles = [
     'woff',
@@ -15,6 +16,7 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
+    VitePWA(),
   ],
   base: '/math-notes',
   build: {
