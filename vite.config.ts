@@ -16,7 +16,9 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
-    VitePWA(),
+    VitePWA({
+        registerType: 'autoUpdate',
+    }),
   ],
   base: '/math-notes',
   build: {
